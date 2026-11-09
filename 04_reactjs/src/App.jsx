@@ -10,9 +10,10 @@ const App = () => {
       .then(data => setCars(data))
       .catch(err => console.error(err));
 
-      console.log(cars)
-  }, []);
-
+    }, []);
+    
+  console.log(cars)
+  
   return (
     <div>
       <h1>Welcome so Car Store</h1>
