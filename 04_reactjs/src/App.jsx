@@ -13,14 +13,16 @@ const App = () => {
     }, []);
     
   console.log(cars)
-  
+
   return (
     <div>
       <h1>Welcome so Car Store</h1>
       <ul>
-        <Car/>
-        <Car/>
-        <Car/>
+        {
+          cars.map((car) => (
+            <Car key={car.id} {...car}/>
+          ))
+        }
       </ul>
     </div>
   )
