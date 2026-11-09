@@ -5,7 +5,7 @@ const App = () => {
   const [cars, setCars] = useState([]);
 
   useEffect(() => {
-    fetch('http://localhost:3000/api/v1/cars')
+    fetch('api/v1/cars')
       .then(res => res.json())
       .then(data => setCars(data))
       .catch(err => console.error(err));
