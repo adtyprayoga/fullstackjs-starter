@@ -1,13 +1,16 @@
 {
   "type": "module",
   "scripts": {
-    "dev": "node --watch server.js"
+    "dev": "node --watch server.js",
+    "db:up": "docker compose up -d --wait db",
+    "db:down": "docker compose down",
+    "db:migrate": "drizzle-kit migrate"
   },
   "dependencies": {
-    "@neondatabase/serverless": "^1.0.2",
     "dotenv": "^17.2.3",
     "drizzle-orm": "^0.45.0",
-    "express": "^5.2.1"
+    "express": "^5.2.1",
+    "postgres": "^4.1.0"
   },
   "devDependencies": {
     "drizzle-kit": "^0.31.8"
